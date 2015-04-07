@@ -1,3 +1,7 @@
 <ul>
-    <li ng-repeat="product in products"><a href="#/product/{{product.alias}}">{{product.title}}</a></li>
+    <li ng-repeat="product in products">
+        <a href="#/product/{{product.alias}}">{{product.title}}</a><br/>
+        {{product.shortDescription}}<br/>
+        Price: {{product.price | currency}}<br/><br/>
+    </li>
 </ul>

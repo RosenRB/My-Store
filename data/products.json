@@ -2,11 +2,15 @@
     {
         "id": "1",
         "title": "Jeans",
-        "alias": "jeans"
+        "alias": "jeans",
+        "shortDescription": "Praesent fringilla tortor sed sapien tempor, id semper eros commodo. Mauris ornare est molestie pharetra elementum. Nullam in felis vel erat hendrerit consequat. Sed tincidunt risus magna, quis posuere arcu posuere at. Sed ac luctus tellus, ac cursus mauris. Phasellus nec aliquet ipsum. Nullam tincidunt porttitor mauris, at mollis erat ultricies vel.",
+        "price": 25
     },
     {
         "id": "2",
         "title": "T-Shirt",
-        "alias": "t-shirt"
+        "alias": "t-shirt",
+        "shortDescription": "Praesent fringilla tortor sed sapien tempor, id semper eros commodo. Mauris ornare est molestie pharetra elementum. Nullam in felis vel erat hendrerit consequat. Sed tincidunt risus magna, quis posuere arcu posuere at. Sed ac luctus tellus, ac cursus mauris. Phasellus nec aliquet ipsum. Nullam tincidunt porttitor mauris, at mollis erat ultricies vel.",
+        "price": 25
     }
 ]
