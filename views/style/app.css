@@ -1,4 +1,26 @@
-h1{
-    font-family: 'Vollkorn', serif;
-    font-weight: 400;
+h1 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+}
+
+a:hover {
+  color: red;
+}
+
+#content {
+  position: absolute;
+  margin-top: 5px;
+  background-color: #11D6F0;
+}
+
+.products {
+  border: 2px dotted black;
+  background-color: #ECF011;
+  position: relative;
+  margin: 15px;
+}
+
+#productTitle {
+  text-align: center;
+  text-decoration: underline;
 }
