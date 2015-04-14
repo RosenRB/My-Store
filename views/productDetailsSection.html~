@@ -1,4 +1,0 @@
-<div class="products">
-   <h1 id="productTitle"><em>{{details.title}}</em></h1>
-   <p>{{details.description}}</p>
-</div>
