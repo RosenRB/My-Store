@@ -10,12 +10,18 @@ app.controller('ProductDetailsSectionController', function($scope, $routeParams,
     });
     
     $scope.onAddToCartButtonClick = function (){
-    	$http.post('http://localhost:8080/rest/cart/add', $scope.details).then(function(response){
+        var productData = {
+            id: $scope.details.id,
+            title: $scope.details.title,
+            price: $scope.details.price
+        };
+
+    	$http.post('http://localhost:8080/rest/cart/add', productData).then(function(response){
 	        if(response.status == 200){
-	            //$scope.details = response.data;
-	            alert(response.data);
+	            //$scope.details = response.data
+	            //alert(response.data);
 	        }else{
-	            alert('Showing cart error');
+                alert('Add to cart error');
 	        }
     	});
     }

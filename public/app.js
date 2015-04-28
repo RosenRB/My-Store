@@ -9,5 +9,9 @@ app.config(function($routeProvider){
     .when('/product/:alias', {
     	templateUrl: "/views/productDetailsSection.html",
     	controller: 'ProductDetailsSectionController'
+    })
+    .when('/cart', {
+    	templateUrl: "views/cartSection.html",
+    	controller: 'CartSectionController'
     });
 });

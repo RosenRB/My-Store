@@ -8,16 +8,26 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false}));
 
 app.post('/rest/cart/add', function (req, res) {
-	//var msg = req.body.msg;
 	var sess = req.session;
-	if(sess.views){
-		sess.views++;
+
+	if(!sess.cart){
+		sess.cart = {};
+	} 
+
+	var product = req.body;
+	if(!sess.cart[product.id]){
+		sess.cart[product.id] = product;
+		sess.cart[product.id].count = 1;
 	}else{
-		sess.views = 1;
+		sess.cart[product.id].count++;
 	}
-	//console.log(req.body);
-	console.log(sess.views);
-  	res.send(sess.views);
+
+	console.log(sess.cart);
+	res.sendStatus(200);
+});
+
+app.get('/rest/cart/list', function(req, res){
+	res.status(200).json(req.session.cart);
 });
 
 app.use(express.static('public'));
