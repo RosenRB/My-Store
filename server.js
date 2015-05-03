@@ -12,16 +12,19 @@ app.post('/rest/cart/add', function (req, res) {
 
 	if(!sess.cart){
 		sess.cart = {};
+        sess.cart.products = {}
+        sess.cart.totalPrice = 0;
 	} 
 
 	var product = req.body;
-	if(!sess.cart[product.id]){
-		sess.cart[product.id] = product;
-		sess.cart[product.id].count = 1;
+	if(!sess.cart.products[product.id]){
+		sess.cart.products[product.id] = product;
+		sess.cart.products[product.id].count = 1;
 	}else{
-		sess.cart[product.id].count++;
+        sess.cart.products[product.id].count++;
 	}
-
+    sess.cart.totalPrice += product.price;
+    
 	console.log(sess.cart);
 	res.sendStatus(200);
 });

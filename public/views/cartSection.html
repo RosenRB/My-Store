@@ -1,9 +1,10 @@
 <ul>
-    <li ng-repeat="product in cart">
+    <li ng-repeat="product in cart.products">
         <div class="products">
             <a href="#/product/{{product.alias}}">{{product.title}}</a>
-            <br/>{{product.count}}<br/>
-            <em>Price</em>: {{product.price | currency}}<br/><br/>
+            <br/><em>Count</em>:  {{product.count}}<br/>
+            <em>Price</em>: {{product.count}} x {{product.price | currency}} = {{product.count * product.price | currency}}<br/><br/>
         </div>
     </li>
 </ul>
+<em><strong>TOTAL</strong></em>:  {{cart.totalPrice | currency}}
